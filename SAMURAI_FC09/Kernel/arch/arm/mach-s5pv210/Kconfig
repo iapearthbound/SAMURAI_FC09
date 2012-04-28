@@ -53,6 +53,13 @@ config S5PV210_POWER_DOMAIN
 	default y
 	help
 	  Enable S5PV210 power domain support.
+
+config GPU_OC
+        bool "enable GPU Overclock"
+        default n
+        help 
+          Enables GPU overclock for SGX540 (for future use)
+
 choice
         prompt "Select ARIES RAM SIZE "
 config DDR_RAM_3G
