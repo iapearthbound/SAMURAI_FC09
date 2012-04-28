@@ -1,0 +1,109 @@
+scripts/kconfig/conf -s arch/arm/Kconfig
+drivers/video/samsung_mipi/Kconfig:66:warning: choice value used outside its choice group
+  CHK     include/linux/version.h
+  CHK     include/generated/kernelversion.h
+  CHK     include/generated/utsrelease.h
+  UPD     include/generated/utsrelease.h
+make[1]: `include/generated/mach-types.h' is up to date.
+  CALL    scripts/checksyscalls.sh
+  GEN     usr/initramfs_data.cpio
+  CHK     include/generated/compile.h
+  CC      init/version.o
+  CC      arch/arm/mach-s5pv210/mach-victory.o
+  LD      init/built-in.o
+  AS      usr/initramfs_data.o
+  CC      kernel/module.o
+In file included from /home/earthbound/1samurai.multi/Kernel/bml_mtd/arch/arm/include/asm/mach-types.h:1,
+                 from arch/arm/mach-s5pv210/mach-victory.c:40:
+include/generated/mach-types.h:2953:1: warning: "MACH_TYPE_FORTE" redefined
+include/generated/mach-types.h:234:1: warning: this is the location of the previous definition
+  LD      usr/built-in.o
+In file included from arch/arm/mach-s5pv210/mach-victory.c:100:
+include/linux/kernel_sec_common.h:46:1: warning: "S3C_PA_WDT" redefined
+In file included from arch/arm/mach-s5pv210/mach-victory.c:42:
+arch/arm/mach-s5pv210/include/mach/map.h:215:1: warning: this is the location of the previous definition
+arch/arm/mach-s5pv210/mach-victory.c: In function 'ce147_power_en':
+arch/arm/mach-s5pv210/mach-victory.c:1876: warning: unused variable 'bd_level'
+arch/arm/mach-s5pv210/mach-victory.c: In function 'victory_power_off':
+arch/arm/mach-s5pv210/mach-victory.c:2834: warning: unused variable 'reset_mode'
+arch/arm/mach-s5pv210/mach-victory.c: At top level:
+arch/arm/mach-s5pv210/mach-victory.c:3425: warning: function declaration isn't a prototype
+arch/arm/mach-s5pv210/include/mach/system.h:19: warning: 'arch_idle' defined but not used
+arch/arm/mach-s5pv210/mach-victory.c:264: warning: 'uart_switch_init' defined but not used
+arch/arm/mach-s5pv210/mach-victory.c:350: warning: 'nt35580' defined but not used
+arch/arm/mach-s5pv210/mach-victory.c:1908: warning: 'smdkc110_cam1_power' defined but not used
+arch/arm/mach-s5pv210/mach-victory.c:2017: warning: 's5ka3dfx_vga_avdd' defined but not used
+arch/arm/mach-s5pv210/mach-victory.c:2467: warning: 'i2c_devs8' defined but not used
+arch/arm/mach-s5pv210/mach-victory.c:3452: warning: 'k3g_irq_init' defined but not used
+  CC      arch/arm/mach-s5pv210/dev-onenand.o
+  CC      kernel/kexec.o
+  CC      fs/romfs/storage.o
+  LD      arch/arm/mach-s5pv210/built-in.o
+  CC      fs/romfs/super.o
+  LD      kernel/built-in.o
+  LD      fs/romfs/romfs.o
+  LD      fs/romfs/built-in.o
+  LD      fs/built-in.o
+  LD      net/netfilter/built-in.o
+  CC      drivers/misc/apanic.o
+drivers/misc/apanic.c: In function 'apanic_proc_read':
+drivers/misc/apanic.c:200: warning: assignment makes pointer from integer without a cast
+drivers/misc/apanic.c: At top level:
+drivers/misc/apanic.c:398: warning: 'mtd_panic_notifier' defined but not used
+  LD      drivers/misc/built-in.o
+  LD      net/built-in.o
+  CC      drivers/tfsr/tfsr_base.o
+  CC      drivers/tfsr/tfsr_block.o
+  CC      drivers/tfsr/tfsr_blkdev.o
+  CC      drivers/tfsr/PAM/Poseidon/FSR_PAM_Poseidon.o
+  LD      drivers/tfsr/tfsr.o
+  LD      drivers/tfsr/built-in.o
+  LD      drivers/built-in.o
+  LD      vmlinux.o
+  MODPOST vmlinux.o
+WARNING: modpost: Found 11 section mismatch(es).
+To see full details build your kernel with:
+'make CONFIG_DEBUG_SECTION_MISMATCH=y'
+  GEN     .version
+  CHK     include/generated/compile.h
+  UPD     include/generated/compile.h
+  CC      init/version.o
+  LD      init/built-in.o
+  LD      .tmp_vmlinux1
+  KSYM    .tmp_kallsyms1.S
+  AS      .tmp_kallsyms1.o
+  LD      .tmp_vmlinux2
+  KSYM    .tmp_kallsyms2.S
+  AS      .tmp_kallsyms2.o
+  LD      vmlinux
+  SYSMAP  System.map
+  SYSMAP  .tmp_System.map
+  OBJCOPY arch/arm/boot/Image
+  Building modules, stage 2.
+  Kernel: arch/arm/boot/Image is ready
+  MODPOST 9 modules
+  CC      crypto/ansi_cprng.mod.o
+  GZIP    arch/arm/boot/compressed/piggy.gzip
+  CC      drivers/misc/vibetonz/vibrator.mod.o
+  CC      drivers/net/wireless/bcm4329/victory/dhd.mod.o
+  SHIPPED arch/arm/boot/compressed/lib1funcs.S
+  AS      arch/arm/boot/compressed/lib1funcs.o
+  CC      drivers/net/wireless/bcm4329/victory/src/wl/sys/hotspot_event_monitoring.mod.o
+  CC      drivers/net/wireless/wimax/cmc7xx_sdio.mod.o
+  CC      drivers/net/wireless/wimaxgpio/wimax_gpio.mod.o
+  CC      drivers/onedram/dpram/dpram.mod.o
+  CC      drivers/onedram/dpram_recovery/dpram_recovery.mod.o
+  CC      drivers/scsi/scsi_wait_scan.mod.o
+  LD [M]  crypto/ansi_cprng.ko
+  LD [M]  drivers/misc/vibetonz/vibrator.ko
+  LD [M]  drivers/net/wireless/bcm4329/victory/dhd.ko
+  LD [M]  drivers/net/wireless/bcm4329/victory/src/wl/sys/hotspot_event_monitoring.ko
+  LD [M]  drivers/net/wireless/wimax/cmc7xx_sdio.ko
+  LD [M]  drivers/net/wireless/wimaxgpio/wimax_gpio.ko
+  LD [M]  drivers/onedram/dpram_recovery/dpram_recovery.ko
+  LD [M]  drivers/onedram/dpram/dpram.ko
+  AS      arch/arm/boot/compressed/piggy.gzip.o
+  LD [M]  drivers/scsi/scsi_wait_scan.ko
+  LD      arch/arm/boot/compressed/vmlinux
+  OBJCOPY arch/arm/boot/zImage
+  Kernel: arch/arm/boot/zImage is ready
